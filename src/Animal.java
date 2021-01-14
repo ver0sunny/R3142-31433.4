@@ -9,6 +9,14 @@ public class Animal {
         this.name = name;
     }
 
+    public void wordSay() {
+        System.out.println(this + " " + "сказал");
+    }
+
+    public void wordAsk() {
+        System.out.println(this + " " + "спросил");
+    }
+
     public String getName() { return this.name;}
 
     public void setForm(PhysicalForm form) { physic = form; }

@@ -1,7 +1,7 @@
 public enum GrowthStage {
-    NUTSEED(" желудь "),
-    SPROUT(" росток "),
-    TREE(" дерево ");
+    NUTSEED("желудь"),
+    SPROUT("росток"),
+    TREE("дерево");
 
     private final String growthStage;
     private int var;

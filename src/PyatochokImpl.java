@@ -5,6 +5,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
 
     private Gelud gelud;
     private int planted;
+    private int pawGrabedFlag = 0;
 
     static class Gelud extends Tree {
         public Gelud(int treeage) {
@@ -17,7 +18,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
         if (planted == 1) this.gelud = gelud;
         else System.out.println("я еще не посадился Т_Т");
         if (gelud.getTreeage() < 5) System.out.println("я еще маленький желудь");
-        if (gelud.getTreeage() > 5 && gelud.getTreeage() <10) System.out.println("я уже не простой орех, я росток!");
+        if (gelud.getTreeage() > 5 && gelud.getTreeage() < 10) System.out.println("я уже не простой орех, я росток!");
         if (gelud.getTreeage() > 10) System.out.println("я есть дерево");
     }
 
@@ -42,5 +43,10 @@ public class PyatochokImpl extends Animal implements Pyatochok {
     @Override
     public void think(String whatToThink) {
         System.out.println(this + " размышлял " + whatToThink);
+    }
+
+    public void grabPaw(Animal whoToGrab) {
+        System.out.println(this + " " + "схватил за лапу" + " " + whoToGrab);
+        pawGrabedFlag = 1;
     }
 }
