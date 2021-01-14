@@ -12,7 +12,25 @@ public class RuImpl extends Animal implements Ru {
     }
 
     public void answer(String whatToSay) {
-        System.out.println(this + " " + "ответил" + " " + whatToSay);
+        System.out.println(this + " " + "ответил" + " " + "\"" + whatToSay + "\"");
     }
 
+    public void attemptsToEatButerBrodik() throws ButerBrodikAlmostEatenException {
+        throw new ButerBrodikAlmostEatenException("произошло непоправимое... БУТЕРБРОДИК ПОПЫТАЛИСЬ СЪЕСТЬ!!!");
+    }
+
+    public void skazal() {
+        class Sova {
+             String name;
+             Sova(String name) {this.name = name;}
+             String fly() {
+                return "летать";
+            }
+            String getName() {
+                 return name;
+            }
+        }
+        Sova sova = new Sova("Совы");
+        System.out.println(this + " сказал: " + "А они могут " + sova.fly() + " не хуже " + sova.getName() + "?");
+    }
 }

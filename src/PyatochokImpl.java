@@ -5,7 +5,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
 
     private Gelud gelud;
     private int planted;
-    private int pawGrabedFlag = 0;
+    private boolean pawGrabbedFlag = false;
 
     static class Gelud extends Tree {
         public Gelud(int treeage) {
@@ -47,6 +47,14 @@ public class PyatochokImpl extends Animal implements Pyatochok {
 
     public void grabPaw(Animal whoToGrab) {
         System.out.println(this + " " + "схватил за лапу" + " " + whoToGrab);
-        pawGrabedFlag = 1;
+        pawGrabbedFlag = true;
+    }
+
+    public void calmDowm(Animal whoToCalm) throws CantCalmDownException {
+        if (pawGrabbedFlag == true) {
+            System.out.println(whoToCalm + " " + "не напугался");
+        } else {
+            throw new CantCalmDownException(whoToCalm + " " + "невероятно сильно напуган и не может ничего с этим поделать");
+        }
     }
 }
