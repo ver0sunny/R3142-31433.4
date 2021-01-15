@@ -8,7 +8,7 @@ public class RuImpl extends Animal implements Ru {
     }
 
     public void ask(TimeState when, String whatToAsk) {
-        System.out.println(this + " " + when.getTimeState() + " " + "спросил" + "\"" + whatToAsk + "?\"");
+        System.out.println(this + " " + when.getTimeState() + " " + "спросил: " + "\"" + whatToAsk + "?\"");
     }
 
     public void answer(String whatToSay) {
@@ -16,7 +16,11 @@ public class RuImpl extends Animal implements Ru {
     }
 
     public void attemptsToEatButerBrodik() throws ButerBrodikAlmostEatenException {
-        throw new ButerBrodikAlmostEatenException("произошло непоправимое... БУТЕРБРОДИК ПОПЫТАЛИСЬ СЪЕСТЬ!!!");
+        if (Math.random()<0.5)
+            throw new ButerBrodikAlmostEatenException("произошло непоправимое... БУТЕРБРОДИК ПОПЫТАЛИСЬ СЪЕСТЬ!!!");
+        else {
+            System.out.println("У " + this + " не вышло откусить бутербродик. Тигра вовремя заметил происходящее. Бутерброд в остался в целости и сохранности!");
+        }
     }
 
     public void skazal() {

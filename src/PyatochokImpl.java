@@ -37,7 +37,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
     @Override
     public void plant(Gelud gelud) {
         planted = 1;
-        System.out.println(this + " посадил" + gelud.getStage().getGrowthStage());
+        System.out.println(this + " посадил " + gelud.getStage().getGrowthStage());
     }
 
     @Override
@@ -54,7 +54,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
         if (pawGrabbedFlag == true) {
             System.out.println(whoToCalm + " " + "не напугался");
         } else {
-            throw new CantCalmDownException(whoToCalm + " " + "невероятно сильно напуган и не может ничего с этим поделать");
+            throw new CantCalmDownException(this + " не взял " + whoToCalm + " за лапу. " + whoToCalm + " " + "невероятно сильно напуган и не может ничего с этим поделать");
         }
     }
 }

@@ -7,7 +7,7 @@ public class Main {
         PyatochokImpl.Gelud gelud = new PyatochokImpl.Gelud(2);
 
         ru.keepQuiet(TimePeriod.NOT_MUCH);
-        ru.ask(TimeState.LATER, " А можно, мы съедим бутерброды");
+        ru.ask(TimeState.LATER, "А можно, мы съедим бутерброды");
 
         tigra.agree(); tigra.ask("А где они");
         ru.answer("Они под " + GrowthStage.TREE.getGrowthStage() + "м");
@@ -26,7 +26,7 @@ public class Main {
         pyatochok.plant(gelud);
         pyatochok.think("скоро"+ " " + gelud.getStage().getGrowthStage() + " " + "вырастет?");
 
- //       pyatochok.grabPaw(vinniPux);
+//        pyatochok.grabPaw(vinniPux);
         try {
             pyatochok.calmDowm(vinniPux);
         } catch (CantCalmDownException e) {
