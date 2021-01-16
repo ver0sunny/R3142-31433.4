@@ -51,7 +51,7 @@ public class PyatochokImpl extends Animal implements Pyatochok {
     }
 
     public void calmDowm(Animal whoToCalm) throws CantCalmDownException {
-        if (pawGrabbedFlag == true) {
+        if (pawGrabbedFlag) {
             System.out.println(whoToCalm + " " + "не напугался");
         } else {
             throw new CantCalmDownException(this + " не взял " + whoToCalm + " за лапу. " + whoToCalm + " " + "невероятно сильно напуган и не может ничего с этим поделать");

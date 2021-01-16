@@ -26,7 +26,7 @@ public class Main {
         pyatochok.plant(gelud);
         pyatochok.think("скоро"+ " " + gelud.getStage().getGrowthStage() + " " + "вырастет?");
 
-//        pyatochok.grabPaw(vinniPux);
+        pyatochok.grabPaw(vinniPux);
         try {
             pyatochok.calmDowm(vinniPux);
         } catch (CantCalmDownException e) {
@@ -34,8 +34,8 @@ public class Main {
         }
 
         ru.skazal();
-
-        Bees bees = new Bees() {
+        
+        Buzzers bees = new Buzzers() {
             public void buzz() {
                 System.out.println("         _  _\n" +
                         "        | )/ )\n" +
